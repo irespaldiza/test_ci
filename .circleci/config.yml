@@ -11,7 +11,7 @@ jobs:
       - add_ssh_key:
         fingerprint:
         - 
-      - run: 
+      - run:
           command: |
             date > $(date | awk '{print $4}')
             git add --all
