@@ -17,6 +17,7 @@ jobs:
             date > a
             cat a
             which git
+            git version
             # git config user.name "okteto"
             # git config user.email "ci@okteto.com
             # git add --all
