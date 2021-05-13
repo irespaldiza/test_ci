@@ -12,13 +12,14 @@ jobs:
           fingerprints:
           - de:0d:9e:c1:3b:25:b6:9b:b6:4c:ee:25:53:f6:e3:04
       - run:
+          name: "test"
           command: |
             date > a
-            git config user.name "okteto"
-            git config user.email "ci@okteto.com
-            git add --all
-            git commit -m "cc"
-            git push
+            # git config user.name "okteto"
+            # git config user.email "ci@okteto.com
+            # git add --all
+            # git commit -m "cc"
+            # git push
 
 workflows:
   version: 2
