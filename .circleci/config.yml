@@ -16,6 +16,7 @@ jobs:
           command: |
             date > a
             git version
+            git config user.name "okteto"
 
 workflows:
   version: 2
