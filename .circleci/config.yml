@@ -15,7 +15,7 @@ jobs:
           name: "test"
           command: |
             date > a
-            # git config user.name "okteto"
+            # git confsdaasdasdasdig user.name "okteto"
             # git config user.email "ci@okteto.com
             # git add --all
             # git commit -m "cc"
