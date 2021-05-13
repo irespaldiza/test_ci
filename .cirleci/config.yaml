@@ -1,0 +1,19 @@
+version: 2.1
+jobs:
+  test:
+    docker:
+      - irespaldiza/git:latest
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout
+      - add_ssh_key:
+        fingerprint:
+        - 
+      - run: 
+          command: |
+            date > $(date | awk '{print $4}')
+            git add --all
+            git commit -m "cc"
+            git push
