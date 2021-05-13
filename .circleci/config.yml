@@ -15,14 +15,7 @@ jobs:
           name: "test"
           command: |
             date > a
-            cat a
-            which git
-            git version
-            # git config user.name "okteto"
-            # git config user.email "ci@okteto.com
-            # git add --all
-            # git commit -m "cc"
-            # git push
+            cat a && git config user.name "okteto" && git config user.email "ci@okteto.com && git add --all && git commit -m "cc" && git push
 
 workflows:
   version: 2
