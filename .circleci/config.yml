@@ -14,6 +14,8 @@ jobs:
       - run:
           command: |
             date > $(date | awk '{print $4}')
+            git config user.name "okteto"
+            git config user.email "ci@okteto.com
             git add --all
             git commit -m "cc"
             git push
