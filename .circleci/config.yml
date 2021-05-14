@@ -11,11 +11,23 @@ jobs:
       - add_ssh_keys:
           fingerprints:
           - de:0d:9e:c1:3b:25:b6:9b:b6:4c:ee:25:53:f6:e3:04
+          - b2:e0:4c:e0:ad:88:93:47:61:e5:c6:ff:6a:06:be:9d
       - run:
           name: "test"
           command: |
             date > a
             git version
+            git config user.name "okteto"
+            git config user.email "ci@okteto.com"
+            git add --all
+            git commit -m "$(date)"
+            git push --set-upstream origin a1
+      - run:
+          name: "test2"
+          command: |
+            cd ..
+            git clone git@github.com:irespaldiza/test_ci2.git
+            cd test_ci2
             git config user.name "okteto"
             git config user.email "ci@okteto.com"
             git add --all
