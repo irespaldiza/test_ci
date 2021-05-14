@@ -20,7 +20,7 @@ jobs:
             git config user.email "ci@okteto.com"
             git add --all
             git commit -m "$(date)"
-            git push --set-upstream origin a1
+            git push --set-upstream origin a3
       - add_ssh_keys:
           fingerprints:
           - b2:e0:4c:e0:ad:88:93:47:61:e5:c6:ff:6a:06:be:9d
@@ -34,7 +34,7 @@ jobs:
             git config user.email "ci@okteto.com"
             git add --all
             git commit -m "$(date)"
-            git push --set-upstream origin a1
+            git push
 
 workflows:
   version: 2
