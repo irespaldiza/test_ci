@@ -15,7 +15,7 @@ jobs:
           name: "test"
           command: |
             date > a
-            git checkout main
+            git checkout test_20
             git config user.name "irespaldiza"
             git config user.email "i.respaldiza@gmail.com"
             git add a
@@ -28,4 +28,4 @@ workflows:
       - test:
           filters:
             branches:
-              ignore: main
+              ignore: test_20
