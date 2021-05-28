@@ -16,7 +16,8 @@ jobs:
           command: |
             date > a
             git checkout main
-            git config user.name "okteto"
+            git config user.name "irespaldiza"
+            git config user.email "i.respaldiza@gmail.com"
             git add a
             git commit -m "$(date)"
             git push
