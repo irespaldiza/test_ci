@@ -31,7 +31,7 @@ jobs:
             echo "test"
             GIT_SSH_COMMAND='ssh -v -i ~/.ssh/id_rsa_b2e04ce0ad88934761e5c6ff6a06be9d'
             ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts
-            git clone git@github.com:irespaldiza/test_ci2.git
+            echo yes | git clone git@github.com:irespaldiza/test_ci2.git
             # cd test_ci2
             # date > a
             # git config user.name "irespaldiza"
