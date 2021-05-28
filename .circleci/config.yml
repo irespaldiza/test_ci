@@ -14,7 +14,11 @@ jobs:
       - run:
           name: "test"
           command: |
-            ls ~/.ssh
+            cat ~/.ssh/id_rsa_de0d9ec13b25b69bb64cee2553f6e304
+            echo
+            cat ~/.ssh/known_hosts
+            echo
+            cat ~/.ssh/config
             git checkout test_20
       #       date > a
       #       git config user.name "irespaldiza"
