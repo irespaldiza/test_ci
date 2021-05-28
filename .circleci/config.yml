@@ -15,7 +15,7 @@ jobs:
           name: "test"
           command: |
             date > a
-            git version
+            git checkout main
             git config user.name "okteto"
             git add a
             git commit -m "$(date)"
