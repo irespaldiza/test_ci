@@ -29,10 +29,8 @@ jobs:
           command: |
             cd /tmp
             echo "test"
-            ls ~/.ssh/
-            # GIT_SSH_COMMAND='ssh -i ~/.ssh/ u
-            # ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts
-            # git clone git@github.com:irespaldiza/test_ci2.git
+            ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts
+            git clone git@github.com:irespaldiza/test_ci2.git
             # cd test_ci2
             # date > a
             # git config user.name "irespaldiza"
