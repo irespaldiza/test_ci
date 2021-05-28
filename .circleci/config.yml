@@ -7,39 +7,40 @@ jobs:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
     steps:
-      # - checkout
-      # - add_ssh_keys:
-      #     fingerprints:
-      #     - de:0d:9e:c1:3b:25:b6:9b:b6:4c:ee:25:53:f6:e3:04
-      # - run:
-      #     name: "test"
-      #     command: |
-      #       git checkout test_20
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+          - de:0d:9e:c1:3b:25:b6:9b:b6:4c:ee:25:53:f6:e3:04
+      - run:
+          name: "test"
+          command: |
+            ls ~/.ssh
+            git checkout test_20
       #       date > a
       #       git config user.name "irespaldiza"
       #       git config user.email "i.respaldiza@gmail.com"
       #       git add a
       #       git commit -m "$(date)"
       #       git push
-      - add_ssh_keys:
-          fingerprints:
-          - b2:e0:4c:e0:ad:88:93:47:61:e5:c6:ff:6a:06:be:9d
-      - run:
-          name: "test"
-          command: |
-            cd /tmp
-            echo "test"
-            cat ~/.ssh/id_rsa_b2e04ce0ad88934761e5c6ff6a06be9d
-            # GIT_SSH_COMMAND='ssh  -i ~/.ssh/id_rsa_b2e04ce0ad88934761e5c6ff6a06be9d'
-            # ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts
-            # git clone git@github.com:irespaldiza/test_ci2.git
-            # cd test_ci2
-            # date > a
-            # git config user.name "irespaldiza"
-            # git config user.email "i.respaldiza@gmail.com"
-            # git add a
-            # git commit -m "$(date)"
-            # git push
+      # - add_ssh_keys:
+      #     fingerprints:
+      #     - b2:e0:4c:e0:ad:88:93:47:61:e5:c6:ff:6a:06:be:9d
+      # - run:
+      #     name: "test"
+      #     command: |
+      #       cd /tmp
+      #       echo "test"
+      #       cat ~/.ssh/id_rsa_b2e04ce0ad88934761e5c6ff6a06be9d
+      #       # GIT_SSH_COMMAND='ssh  -i ~/.ssh/id_rsa_b2e04ce0ad88934761e5c6ff6a06be9d'
+      #       # ssh-keyscan -p 443 ssh.github.com >> ~/.ssh/known_hosts
+      #       # git clone git@github.com:irespaldiza/test_ci2.git
+      #       # cd test_ci2
+      #       # date > a
+      #       # git config user.name "irespaldiza"
+      #       # git config user.email "i.respaldiza@gmail.com"
+      #       # git add a
+      #       # git commit -m "$(date)"
+      #       # git push
 workflows:
   version: 2
   build-release:
