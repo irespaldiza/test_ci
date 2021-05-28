@@ -17,7 +17,9 @@ jobs:
             date > a
             git version
             git config user.name "okteto"
-
+            git add a
+            git commit -m "$(date)"
+            git push
 workflows:
   version: 2
   build-release:
