@@ -14,8 +14,8 @@ jobs:
       - run:
           name: "test"
           command: |
-            date > a
             git checkout test_20
+            date > a
             git config user.name "irespaldiza"
             git config user.email "i.respaldiza@gmail.com"
             git add a
